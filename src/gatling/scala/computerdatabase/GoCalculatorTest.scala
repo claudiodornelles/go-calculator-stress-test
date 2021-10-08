@@ -19,7 +19,6 @@ class GoCalculatorTest extends Simulation {
     .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0")
 
   val scn: ScenarioBuilder = scenario("Test calculator endpoints")
-    .pause(7)
     .exec(http("Divide")
       .get("/calc/div/10/7"))
     .pause(2)
@@ -32,8 +31,6 @@ class GoCalculatorTest extends Simulation {
     .exec(http("Subtract")
       .get("/calc/sub/10/7"))
     .pause(670.milliseconds)
-    .exec(http("Power")
-      .get("/calc/pow/10/3"))
     .exec(http("History")
       .get("/calc/history"))
 
