@@ -9,9 +9,7 @@ import scala.concurrent.duration._
 
 class GoCalculatorTest extends Simulation {
 
-  var numberOfUsers = 1
-  var repeatCount = 10
-  var execution = 0
+  var numberOfUsers = 50
 
   val httpProtocol: HttpProtocolBuilder = http
     .baseUrl("http://localhost:8090")
@@ -36,8 +34,5 @@ class GoCalculatorTest extends Simulation {
     .exec(http("History")
       .get("/calc/history"))
 
-  for( execution <- 1 to repeatCount){
-    setUp(scn.inject(atOnceUsers(math.pow(numberOfUsers, execution).toInt)).protocols(httpProtocol))
-  }
-
+    setUp(scn.inject(atOnceUsers(numberOfUsers)).protocols(httpProtocol))
 }
