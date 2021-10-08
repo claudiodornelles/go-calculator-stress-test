@@ -1,0 +1,6 @@
+.editorconfig
+.gitattributes
+.idea/
+.gradle
+
+build
