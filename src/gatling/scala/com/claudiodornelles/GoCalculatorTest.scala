@@ -1,4 +1,4 @@
-package computerdatabase
+package com.claudiodornelles
 
 import io.gatling.core.Predef._
 import io.gatling.core.structure.ScenarioBuilder
