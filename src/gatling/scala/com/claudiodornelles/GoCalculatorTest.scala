@@ -9,7 +9,7 @@ import scala.concurrent.duration._
 
 class GoCalculatorTest extends Simulation {
 
-  val numberOfUsers: Integer = Integer.getInteger("users", 1)
+  val numberOfUsers: Integer = Integer.getInteger("GATLING_USERS", 1)
 
   val httpProtocol: HttpProtocolBuilder = http
     .baseUrl("http://localhost:8090")
