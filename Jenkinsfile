@@ -5,7 +5,8 @@ pipeline {
    stages {
       stage('Run Gatling stress test') {
          steps {
-            sh './gradlew gatlingRun JAVA_OPTS="-Dusers=50"'
+            sh 'export GATLING_USERS=50'
+            sh './gradlew gatlingRun'
          }
       }
    }

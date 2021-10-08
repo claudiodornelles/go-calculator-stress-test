@@ -5,9 +5,6 @@ plugins {
 gatling {
   logLevel = 'WARN'
   logHttp = 'ALL'
-}
-
-gatling {
   simulations = {
     "**/com.claudiodornelles/GoCalculatorTest.scala"
   }
